@@ -157,8 +157,10 @@ syntax region clojureMap    matchgroup=clojureParen start="{"  end="}" contains=
 " Highlight superfluous closing parens, brackets and braces.
 syntax match clojureError "]\|}\|)"
 
+syntax match clojureNamespacedThing ".\/"
 syntax sync fromstart
 
+highlight default link clojureNamespacedThing           Constant
 highlight default link clojureConstant                  Constant
 highlight default link clojureBoolean                   Boolean
 highlight default link clojureCharacter                 Character
